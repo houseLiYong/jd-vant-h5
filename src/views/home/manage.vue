@@ -1,5 +1,5 @@
 <template>
-      <panel :class="$style.manege" v-on:give-advice="showAdvice" :title="title" :size="size">
+      <panel :class="$style.manege" class="title" v-on:give-advice="showAdvice" :title="title" :size="size">
       </panel>
 </template>
 <script>

@@ -13,6 +13,7 @@
   import Notice from './notice.vue'
   import Borrow from './borrow.vue'
   import Money from './money.vue'
+  import Message from './manage.vue'
       export default {
         name: 'home',
         data() {
@@ -33,7 +34,7 @@
           Hslider,
           Notice,
           Borrow,
-          Money
+          Money,
         },
         computed:{
           username(){
