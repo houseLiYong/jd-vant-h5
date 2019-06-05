@@ -1,6 +1,6 @@
 <template>
     <article >
-      <Slider :items="items" :name="name"></Slider>
+      <Slider :items="items" :name="name" :options="options"></Slider>
       <section :class="$style.list">
         <div :class="$style.item" v-for="item in enters" :key="item.img">
           <router-link :to="{ name:item.href }">
@@ -18,6 +18,20 @@
         data() {
             return {
               name:'slider',
+              options:{
+                notNextTick:true,
+                autoplay:{
+                  delay:3000,
+                },
+                speed:800,
+                loop:true,
+                pagination:{
+                  el:'.swiper-pagination',
+                  clickable: true,
+                  bulletClass: 'my-bullet',
+                  bulletActiveClass: 'my-bullet-active'
+                },
+              },
               items:[{
                 href:'home',
                 src:"https://img12.360buyimg.com/jrpmobile/jfs/t1/19037/8/10380/37518/5c862ba2Ec8e629f7/6c4f8c721cf210d8.jpg?width=750&height=320",
@@ -77,13 +91,34 @@
     }
 </script>
 <!-- Add "scoped" attribute to limit CSS to this component only -->
+<style lang="scss">
+  .my-bullet{
+    margin: 0 3px;
+    width: 10px;
+    height: 5px;
+    display: inline-block;
+    border-radius: 10%;
+    background: #000;
+    opacity: .2;
+  }
+  .my-bullet-active{
+    width: 10px;
+    height: 5px;
+    margin: 0 3px;
+    opacity: 1;
+    border-radius: 50%;
+    background: #fff
+  }
+
+</style>
 <style lang="scss" module>
     @import "../../../static/css/element";
+
     .list{
       @include list(row);
       background: #ffffff;
-      padding-top: px2rem(20);
-      padding-bottom: px2rem(10);
+      padding-top: 20px;
+      padding-bottom: 10px;
       justify-content: space-around;
       flex-wrap:wrap;
       &:after{
@@ -99,13 +134,13 @@
         font-size: 0;
         img{
           display: inline-block;
-          width: px2rem(45);
-          height: px2rem(45);
+          width: 45px;
+          height: 45px;
         }
         h4{
-          margin-top: px2rem(6);
+          margin-top: 6px;
           color: #666;
-          font-size:px2rem(14);
+          font-size: 14px;
           text-align: center;
           display: block;
           color: #666;

@@ -29,6 +29,7 @@
     </div>
 </template>
 <script>
+  import Navbar from '../../components/public/navbar.vue'
   import user1 from '@/components/user1'
     export default {
         name: 'user',
@@ -38,7 +39,7 @@
               id:0,
               loading:false,
               post:null,
-              error:null
+              error:null,
             }
         },
         components:{
@@ -47,6 +48,7 @@
         created(){
           //组件创建完成后，获取数据，
           //此时data已经被observed 了
+          //使用setTimeout()模拟ajax异步获取数据，传递给子组件使用
           this.fetchData()
         },
         watch:{

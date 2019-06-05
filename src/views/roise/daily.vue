@@ -1,9 +1,8 @@
 <template>
-  <Panel :title="title"  :class="$style.panel">
+  <Panel :title="title" :class="$style.panel">
     <section :class="$style.content">
-      <router-link :to="{ name:'home',params:{} }">
-        <img src="https://img12.360buyimg.com/jrpmobile/jfs/t22897/39/1541754983/14812/d61317bc/5b6263e4Nbd9cf24d.png?width=690&height=154" alt="">
-      </router-link>
+      <img src="https://img12.360buyimg.com/jrpmobile/jfs/t1/16662/30/15341/22141/5caf3007Ed04371f5/92aeb35325e56d32.png?width=375&height=233" alt="">
+      <img src="https://img12.360buyimg.com/jrpmobile/jfs/t1/21337/31/13706/22340/5ca18608Ebdd6ea02/02d3b385bf9c045c.png?width=375&height=233" alt="">
     </section>
   </Panel>
 </template>
@@ -13,16 +12,10 @@
         components:{
           Panel
         },
-        props:{
-
-        },
         data() {
             return {
-              title:"极速借贷"
+              title:'每日签到'
             }
-        },
-        created:function () {
-
         },
         methods: {
             init: function () {
@@ -39,21 +32,21 @@
     @import "../../../static/css/element";
     .panel{
       @include panel();
-      &>h4{
-        &:before{
-          content: '-';
+      h4{
+        &:before,&:after{
+          content: "-";
+          width: 5px;
           display: inline-block;
-        }
-        &:after{
-          content: '-';
-          display: inline-block;
+          margin: 0  10px;
         }
       }
       .content{
+        @include flex(row);
+        box-sizing: border-box;
         padding-bottom: 20px;
         img{
-          display: block;
-          width: 100%;
+          width: 160px;
+          height: 100px;
         }
       }
     }

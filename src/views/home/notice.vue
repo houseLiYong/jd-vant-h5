@@ -52,7 +52,16 @@
       @include panel();
       >h4{
         border-bottom: 1px solid #ddd;
+        &:before{
+          content: '-';
+          display: inline-block;
+        }
+        &:after{
+          content: '-';
+          display: inline-block;
+        }
       }
+
       .content{
         @include list(row);
         .item{

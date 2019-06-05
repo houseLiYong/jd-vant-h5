@@ -30,7 +30,7 @@ $designWidth:750;
   @include flex($direction);
 }
 /* 面板*/
-@mixin panel($bgcolor:#fff,$padding:0,$margin:20 0,$height:56,$txtPadding:0 32,$color:#333,$fontSize:16){
+@mixin panel($bgcolor:#fff,$padding:0,$margin:20 0,$height:56,$txtPadding:0 32,$color:#333,$fontSize:18){
   background-color: $bgcolor;
   &::after{
     content: "";
@@ -43,7 +43,6 @@ $designWidth:750;
     padding: 0;
     margin: 0;
     height: px2rem($height) ;
-
     line-height: px2rem($height) ;
     text-overflow: ellipsis;
     white-space: nowrap;

@@ -33,6 +33,16 @@
     @import "../../../static/css/element";
     .manege{
       @include panel();
+      &>h4{
+        &:before{
+          content: '-';
+          display: inline-block;
+        }
+        &:after{
+          content: '-';
+          display: inline-block;
+        }
+      }
       div{
         font-size: 0;
       }

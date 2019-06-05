@@ -11,6 +11,9 @@ const routes = [
   { path:'/',redirect:'/home' },
   { path:'/foo',component:Foo, },
   { path:'/bar', component:Bar,  },
+  { path:'/roise',component:(resolve)=>require(['@/views/roise/index'],resolve) },
+  { path:'/ious',component:(resolve)=>require(['@/views/ious/index'],resolve) },
+  { path:'/money',name:'money',component:(resolve)=>require(['@/views/money/index'],resolve) },
   { path:'/home',name:'home',component:(resolve)=> require(['@/views/home/index'], resolve)  },
   {
     path:'/user/:id',

@@ -38,20 +38,22 @@
 <style lang="scss" module>
     @import "../../../static/css/element";
     .header{
-      color: #666;
-      font-size: px2rem(14);
-      height: px2rem(50);
-      line-height: px2rem(50);
+      color: #333;
+      font-size: 14px;
+      height: 44px;
+      line-height: 44px;
       position: fixed;
       top: 0;
       left:0;
       right: 0;  //宽度等于100%
       z-index: 100;
+      background: #fff;
+      border-bottom: 1px solid #e5e5e5;
       .left{
-        font-size: px2rem(14);
-        height: px2rem(15);
-        line-height:px2rem(15);
-        margin: px2rem(8) 0 0 px2rem(9);
+        font-size: 14px;
+        height: 44px;
+        line-height: 44px;
+        margin-left: 8px;
         em{
           font-style: normal;
         }
@@ -59,14 +61,14 @@
       .btnDownload{
         @include btn();
         float: right;
-        font-size: px2rem(12);
+        font-size: 14px;
         border-width: 0;
-        height: px2rem(28);
-        line-height: px2rem(28);
-        min-width:px2rem(60);
+        height: 28px;
+        line-height: 28px;
+        min-width: 60px;
         padding:0;
-        border-radius: px2rem(2);
-        margin:px2rem(14) px2rem(12) 0 0;
+        border-radius: 2px;
+        margin: 8px 12px;
       }
     }
 </style>
